@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useState } from "react";
+import { Link } from 'react-router-dom';
+import '../../styles.scss'
 
 export default function Temperatura() {
     const [temperatura, setTemperatura] = useState();
@@ -18,22 +20,26 @@ export default function Temperatura() {
     }
 
     return(
-        <section>
+        <section className="column wh100 jc-center al-center">
             <div>
-                AVALIE A SUA TEMPERATURA
+                <Link to='/'> <img src="/images/voltar.png" /> </Link>
+                <div className='container-verde al-center'>
+                    <div className="borda b74c365 jc-center al-center text">
+                        AVALIE A SUA TEMPERATURA
+                    </div>
+
+                    <div className="column padding text     ">
+                        <label className='c74c365'> Temperatura: </label>
+                        <input type='text' placeholder='informe sua temperatura atual' value={temperatura} onChange={e => Number(setTemperatura(e.target.value))} /> 
+                    </div>
+
+                    <div className="padding">
+                        <button className="text b74c365" onClick={checarTemperatura}> Checar </button>
+                    </div>
+
+                    <div className="padding"> Sua situação é: <span className="text c74c365"> {msg} </span> </div>
+                </div>
             </div>
-
-            <div>
-                <label> Temperatura: </label>
-                <input type='text' placeholder='informe sua temperatura atual' value={temperatura} onChange={e => Number(setTemperatura(e.target.value))} /> 
-            </div>
-
-            <div>
-                <button onClick={checarTemperatura}> Checar </button>
-            </div>
-
-            <div> Sua situação é: {msg} </div>
-
         </section>
     )
 }

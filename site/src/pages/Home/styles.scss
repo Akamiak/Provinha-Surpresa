@@ -1,0 +1,48 @@
+.home {
+    padding-left: .2rem;
+}
+
+.card {
+    width: 60vw;
+    background-color: #fff;
+    box-shadow: 6px 8px 12px #696969;
+    padding: 1.5rem;
+    border-radius: 1.8rem;
+    margin: 2rem 0 1.5rem 0;
+}
+
+.titulo {
+    margin-top: 4rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.sequencia:nth-child(1) {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: .2rem;
+    border-left: 8px solid #4d4dff;
+}
+
+.sequencia2 {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: .2rem;
+    border-left: 8px solid #74c365;
+}
+
+.home-padding {
+    padding: 1rem;
+}
+
+.botão {
+    margin-top: .6rem;
+}
+
+h2 {
+    margin-top: 1rem;
+}

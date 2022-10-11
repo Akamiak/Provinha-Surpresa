@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { StyledSigno } from "./styles";
+import { Link } from 'react-router-dom'
+import '../../../commom.scss'
+import '../../styles.scss'
 
 export default function SignoPage() {
     const [mes, setMes] = useState('');
@@ -15,27 +17,30 @@ export default function SignoPage() {
     }
 
     return(
-        <StyledSigno>
+        <section className="column wh100 jc-center al-center">
             <div>
-                VERIFICAR SIGNO LIBRA 
-            </div>
+                <Link to='/'> <img src="/images/voltar.png" /> </Link>
+                <div className="container-azul al-center jc-between">
+                    <div className="borda b4d4dff jc-center al-center text">
+                        VERIFICAR SIGNO LIBRA 
+                    </div>
 
-            <div>
-                <label> Mês do Nascimento </label>
-                <input type='text' placeholder="informe o mês" value={mes} onChange={e => setMes(e.target.value)} />
-            </div>
-            <div>
-                <label> Dia do Nascimento </label>
-                <input type='text' placeholder="informe o dia" value={dia} onChange={e => Number(setDia(e.target.value))} />
-            </div>
+                    <div className="column padding text">
+                        <label className="c4d4dff"> Mês do Nascimento </label>
+                        <input type='text' placeholder="informe o mês" value={mes} onChange={e => setMes(e.target.value)} />
+                    </div>
+                    <div className="column padding text">
+                        <label className="c4d4dff"> Dia do Nascimento </label>
+                        <input type='text' placeholder="informe o dia" value={dia} onChange={e => Number(setDia(e.target.value))} />
+                    </div>
 
-            <div>
-                <button onClick={verificarSigno}> Checar seu signo </button>
-            </div>            
+                    <div className="padding">
+                        <button className="text b4d4dff" onClick={verificarSigno}> Checar seu signo </button>
+                    </div>            
 
-            <div>
-                <p> Seu signo é libra? {signo ? 'Sim' : 'Não'} </p>
+                    <div className="padding"> Seu signo é libra? <span className="c4d4dff text"> {signo ? 'Sim' : 'Não'} </span> </div>
+                </div>
             </div>
-        </StyledSigno>
+        </section>
     )
 }
