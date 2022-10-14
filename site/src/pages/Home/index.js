@@ -5,14 +5,21 @@ import './styles.scss'
 export default function Home() {
     return(
         <section className="column home-padding ">
-            <div className="row"> 
-                <img src="/images/home.png" />
-                <h1 className="text home"> <span className="c4d4dff"> H </span> <span className="c74c365"> o </span> M E</h1>
+            <div>
+                <Link className="row" to='/'> 
+                    <img src="/images/home.png" />
+                    <h1 className="text home"> 
+                        <span className="c4d4dff"> H </span> 
+                        <span className="c74c365"> o </span> 
+                        <span className="cd31949"> m </span> 
+                        <span className=""> e </span> 
+                    </h1>
+                </Link>
             </div>
 
             <div className="column jc-center al-center">
                 <div className="card">
-                    <h1 className="sequencia"> Primeira Sequência</h1>
+                    <h1 className="sequencia borda-azul"> Primeira Sequência</h1>
                     
                     <div className="row jc-between titulo">
                         <div className="column jc-center al-center">
@@ -31,7 +38,7 @@ export default function Home() {
                 </div>
 
                 <div className="card">
-                    <h1 className="sequencia2"> Segunda Sequência</h1>
+                    <h1 className="sequencia borda-verde"> Segunda Sequência</h1>
                     
                     <div className="row jc-between titulo">
                         <div className="column jc-center al-center">
@@ -48,21 +55,23 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+
+                <div className="card">
+                    <h1 className="sequencia borda-vermelha"> Terceira Sequência</h1>
+                    
+                    <div className="row jc-around titulo">
+                        <div className="column jc-center al-center">
+                            <h2> Orçamento </h2>
+                            <Link to='/terceiro/ex7'> <button className="text bd31949 botão"> Exercício 7 </button> </Link>
+                        </div>
+                        <div className="column jc-center al-center">
+                            <h2> Cinema </h2>
+                            <Link to='/terceiro/ex8'> <button className="text bd31949 botão"> Exercício 8 </button> </Link>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            {/* <div> Home </div>
-
-            <div>
-                <Link to='/primeiro/ex1'> Ex1 </Link>
-                <Link to='/primeiro/ex2'> Ex2 </Link>
-                <Link to='/primeiro/ex3'> Ex3 </Link>
-            </div>
-
-            <div>
-                <Link to='/segundo/ex4'> Ex4 </Link>
-                <Link to='/segundo/ex5'> Ex5 </Link>
-                <Link to='/segundo/ex6'> Ex6 </Link>
-            </div> */}
-
         </section>
     )
 };

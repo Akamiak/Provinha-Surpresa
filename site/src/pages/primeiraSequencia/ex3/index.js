@@ -11,10 +11,10 @@ export default function SorveteriaPage() {
         if(gramas < 0)
             setTotal("Peso inválido")
         else if(gramas >= 1000) {
-            setTotal(gramas * (3/100));
+            setTotal((gramas * (3/100)).toFixed(2));
         }
         else
-            setTotal(gramas * (3.50/100));
+                setTotal((gramas * (3.50/100)).toFixed(2));
     }
 
     return(

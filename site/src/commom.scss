@@ -29,6 +29,14 @@
     justify-content: space-between;
 }
 
+.jc-around {
+    justify-content: space-around;
+}
+
+.jc-start {
+    justify-content: flex-start;
+}
+
 .al-center {
     align-items: center;
 }
@@ -48,6 +56,22 @@
 .b74c365 {
     background-color: #74c365;
 }
+
+.cd31949 {
+    color: #d31949;
+}
+
+.bd31949 {
+    background-color: #d31949;
+}
+
+// .c533d8b {
+//     color: #ffe600;
+// }
+
+// .b533d8b {
+//     background-color: #ffe600;
+// }
 
 .text {
     font-family: sans-serif;

@@ -19,20 +19,22 @@
     font-weight: 600;
 }
 
-.sequencia:nth-child(1) {
+.sequencia {
     font-family: sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     padding-left: .2rem;
+}
+.borda-azul {
     border-left: 8px solid #4d4dff;
 }
 
-.sequencia2 {
-    font-family: sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding-left: .2rem;
+.borda-verde {
     border-left: 8px solid #74c365;
+}
+
+.borda-vermelha {
+    border-left: 8px solid #d31949;
 }
 
 .home-padding {
