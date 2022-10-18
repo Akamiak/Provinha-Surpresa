@@ -2,18 +2,16 @@ import { useState } from "react";
 import { Link } from 'react-router-dom'
 import '../../../commom.scss'
 import '../../styles.scss'
+import verificarSigno from "../../../services/primeiraSequencia/ex2";
 
 export default function SignoPage() {
     const [mes, setMes] = useState('');
     const [dia, setDia] = useState();
     const [signo, setSigno] = useState(false);
 
-    function verificarSigno() {
-        if(mes === 'Setembro' && dia >= 23 || mes === 'Outubro' && dia <=23 ||
-           mes === 'setembro' && dia >= 23 || mes === 'outubro' && dia <=23)
-            setSigno(true);
-        else
-            setSigno(false);
+    function click() {
+        const resp = verificarSigno(mes, dia);
+        setSigno(resp);
     }
 
     return(
@@ -35,7 +33,7 @@ export default function SignoPage() {
                     </div>
 
                     <div className="padding">
-                        <button className="text b4d4dff" onClick={verificarSigno}> Checar seu signo </button>
+                        <button className="text b4d4dff" onClick={click}> Checar seu signo </button>
                     </div>            
 
                     <div className="padding"> Seu signo é libra? <span className="c4d4dff text"> {signo ? 'Sim' : 'Não'} </span> </div>

@@ -2,19 +2,15 @@ import { useState } from "react";
 import { Link } from 'react-router-dom'
 import '../../../commom.scss'
 import '../../styles.scss'
+import calcularGramas from "../../../services/primeiraSequencia/ex3";
 
 export default function SorveteriaPage() {
     const [gramas, setGramas] = useState();
     const [total, setTotal] = useState(0);
 
-    function calcularGramas() {        
-        if(gramas < 0)
-            setTotal("Peso inválido")
-        else if(gramas >= 1000) {
-            setTotal((gramas * (3/100)).toFixed(2));
-        }
-        else
-                setTotal((gramas * (3.50/100)).toFixed(2));
+    function click() {        
+        const calc = calcularGramas(gramas);
+        setTotal(calc);
     }
 
     return(
@@ -32,7 +28,7 @@ export default function SorveteriaPage() {
                     </div>
 
                     <div className="padding">
-                        <button className="text b4d4dff" onClick={calcularGramas}> Calcular </button>
+                        <button className="text b4d4dff" onClick={click}> Calcular </button>
                     </div>            
 
                     <div className="padding"> O valor total é:R$ <span className="c4d4dff text"> {total} </span> </div>

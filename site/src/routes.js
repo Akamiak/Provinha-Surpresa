@@ -9,6 +9,8 @@ import ParadasPage from './pages/segundaSequencia/ex5';
 import TemperaturaPage from './pages/segundaSequencia/ex6';
 import OrcamentoPage from './pages/terceiraSequencia/ex7';
 import CinemaPage from './pages/terceiraSequencia/ex8';
+import ContagemPage from './pages/quartaSequencia/ex9';
+import LinhaPage from './pages/quartaSequencia/ex10';
 
 
 export default function Index() {
@@ -27,6 +29,9 @@ export default function Index() {
 
                 <Route path='/terceiro/ex7' element={<OrcamentoPage />} /> 
                 <Route path='/terceiro/ex8' element={<CinemaPage />} /> 
+
+                <Route path='/quarto/ex9' element={<ContagemPage />} /> 
+                <Route path='/quarto/ex10' element={<LinhaPage />} /> 
             </Routes>
         </BrowserRouter>
     )   

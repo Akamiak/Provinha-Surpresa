@@ -1,22 +1,15 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import '../../styles.scss'
+import '../../styles.scss';
+import checarTemperatura from "../../../services/segundaSequencia/ex6";
 
 export default function Temperatura() {
     const [temperatura, setTemperatura] = useState();
     const [msg, setMsg] = useState('');
 
-    function checarTemperatura() {
-        if(temperatura < 36.0)
-            setMsg('Hipotermia')
-        else if(temperatura < 37.6)
-            setMsg('Normal')
-        else if(temperatura < 39.6)
-            setMsg('Febre')
-        else if(temperatura < 41.0)
-            setMsg('Febre alta')
-        else if(temperatura >= 41)
-            setMsg('Hipertermia')
+    function click() {
+        const resp = checarTemperatura(temperatura);
+        setMsg(resp);
     }
 
     return(
@@ -34,7 +27,7 @@ export default function Temperatura() {
                     </div>
 
                     <div className="padding">
-                        <button className="text b74c365" onClick={checarTemperatura}> Checar </button>
+                        <button className="text b74c365" onClick={click}> Checar </button>
                     </div>
 
                     <div className="padding"> Sua situação é: <span className="text c74c365"> {msg} </span> </div>

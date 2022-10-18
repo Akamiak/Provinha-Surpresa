@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles.scss'
+import calcularSalario from '../../../services/segundaSequencia/ex4';
 
 export default function SalarioLiquido() {
     const [salarioBase, setSalarioBase] = useState();
@@ -8,10 +9,10 @@ export default function SalarioLiquido() {
     const [desconto, setDesconto] = useState();
     const [total, setTotal] = useState(0);
 
-        function calcularSalario() {
-            const calc = (salarioBase - desconto) + ((bonus/100) * salarioBase);
-            setTotal(calc);
-        }
+    function click() {
+        const calc = calcularSalario(salarioBase, bonus, desconto);
+        setTotal(calc);
+    }
 
     return(
         <section className="column wh100 jc-center al-center">
@@ -39,7 +40,7 @@ export default function SalarioLiquido() {
 
                     
                     <div className="padding">
-                        <button className="text b74c365" onClick={calcularSalario}> Calcular </button>
+                        <button className="text b74c365" onClick={click}> Calcular </button>
                     </div>
 
                     <div className="padding"> O salário líquido é: R$ <span className="c74c365 text"> {total} </span> </div>

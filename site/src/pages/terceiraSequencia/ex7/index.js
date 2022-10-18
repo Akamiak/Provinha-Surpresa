@@ -1,23 +1,16 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import '../../styles.scss'
+import '../../styles.scss';
+import verificarOrcamento from "../../../services/terceiraSequencia/ex7";
 
 export default function Orcamento() {
     const [gastos, setGastos] = useState();
     const [ganhos, setGanhos] = useState();
     const [msg, setMsg] = useState('');
 
-    function verificarOrcamento() {
-        if(gastos > ganhos) 
-            setMsg('Orçamento comprometido! Hora de rever seus gastos!');
-        else if(gastos > ((81/100)*ganhos) && gastos < ganhos)
-            setMsg('Cuidado, seu orçamento pode ficar comprometido!');
-        else if(gastos > ((51/100)*ganhos) && gastos < ((80/100)*ganhos))
-            setMsg('Atenção, melhor conter seus gastos!');
-        else if(gastos > ((21/100)*ganhos) && gastos < ((50/100)*ganhos))
-            setMsg('Muito bem, seus gastos não ultrapassaram metade dos ganhos!');
-        else if(gastos > (0*ganhos) && gastos < ((20/100)*ganhos))
-            setMsg('Parabéns, está gerenciando bem seu orçamento!');
+    function click() {
+        const resp = verificarOrcamento(gastos, ganhos);
+        setMsg(resp);
     }
 
 
@@ -41,7 +34,7 @@ export default function Orcamento() {
                     </div>
 
                     <div className="padding">
-                        <button className="text bd31949" onClick={verificarOrcamento}> Checar </button>
+                        <button className="text bd31949" onClick={click}> Checar </button>
                     </div>
 
                     <div className="padding"> Sua situação: <span className="text cd31949"> {msg} </span> </div>

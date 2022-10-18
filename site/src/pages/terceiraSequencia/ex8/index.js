@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import '../../styles.scss'
+import '../../styles.scss';
+import calcularIngresso from "../../../services/terceiraSequencia/ex8";
 
 export default function Cinema() {
     const [qtdInteiras, setQtdInteiras] = useState();
@@ -9,16 +10,9 @@ export default function Cinema() {
     const [nacionalidade, setNacionalidade] = useState(false);
     const [total, setTotal] = useState();
 
-    function calcularIngresso() {
-        if(nacionalidade === true)
-            setTotal((qtdInteiras * 5) + (qtdMeias * 5));
-
-        else if(diaSemana === 'quarta' ||
-                diaSemana === 'quarta-feira')
-            setTotal((qtdInteiras * 14.25) + (qtdMeias * 14.25));
-        
-        else 
-            setTotal((qtdInteiras * 28.50) + (qtdMeias * 14.25))
+    function click() {
+        const calc = calcularIngresso(qtdInteiras, qtdMeias, diaSemana, nacionalidade);
+        setTotal(calc);
     }
 
     return(
@@ -51,7 +45,7 @@ export default function Cinema() {
                     </div>
 
                     <div className="padding">
-                        <button className="text bd31949" onClick={calcularIngresso}> Calcular </button>
+                        <button className="text bd31949" onClick={click}> Calcular </button>
                     </div>
 
                     <div className="padding"> O valor será de R$<span className="text cd31949"> {total} </span> </div>

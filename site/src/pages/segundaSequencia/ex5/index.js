@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import '../../styles.scss'
+import calcularParadas from "../../../services/segundaSequencia/ex5";
 
 export default function ParadasAbastecimento() {
     const [tanque, setTanque] = useState();
@@ -8,8 +9,8 @@ export default function ParadasAbastecimento() {
     const [distancia, setDistancia] = useState();
     const [total, setTotal] = useState(0);
 
-    function calcularParadas() {
-        let calc = distancia / (tanque * consumo);
+    function click() {
+        const calc = calcularParadas(tanque, distancia, consumo);
         setTotal(Math.ceil(calc))
     }
 
@@ -41,7 +42,7 @@ export default function ParadasAbastecimento() {
 
                     
                     <div className="padding">
-                        <button className="text b74c365" onClick={calcularParadas}> Calcular </button>
+                        <button className="text b74c365" onClick={click}> Calcular </button>
                     </div>
 
                     <div className="padding"> O total de paradas necessárias são: <span className="text c74c365"> {total} </span> </div>

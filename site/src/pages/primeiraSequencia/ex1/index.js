@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from 'react-router-dom'
 import '../../../commom.scss'
 import '../../styles.scss'
+import calcularAcai from "../../../services/primeiraSequencia/ex1";
 
 export default function AcaiPage() {
         const [pAcai, setPAcai] = useState();
@@ -10,8 +11,8 @@ export default function AcaiPage() {
         const [desconto, setDesconto] = useState();
         const [total, setTotal] = useState(0);
 
-    function calcularAcai() {
-        const calc = ((pAcai * 13.50) + (mAcai * 15.00) + (gAcai * 17.50 )) * (desconto/100 -1);
+    function click() {
+        const calc = calcularAcai(pAcai, mAcai, gAcai, desconto);
         setTotal(Math.abs(calc));
     }
 
@@ -44,7 +45,7 @@ export default function AcaiPage() {
 
                     <div className="padding">
                         <div>
-                            <button className="text b4d4dff" onClick={calcularAcai}> Calcular </button>
+                            <button className="text b4d4dff" onClick={click}> Calcular </button>
                         </div>
 
                         <div> O valor é: R$ <span className="c4d4dff text"> {total} </span> </div>
