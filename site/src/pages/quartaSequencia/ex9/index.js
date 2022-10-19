@@ -5,8 +5,8 @@ import '../../styles.scss'
 import contar from "../../../services/quartaSequencia/ex9";
 
 export default function Contagem() {
-    const [inicio, setInicio] = useState(0);
-    const [fim, setFim] = useState(0);
+    const [inicio, setInicio] = useState();
+    const [fim, setFim] = useState();
     const [result, setResult] = useState([]);
 
     function click() {

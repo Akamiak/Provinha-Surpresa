@@ -1,7 +1,7 @@
 export default function calcularGramas(gramas) {        
-    if(gramas < 0)
+    if(Number(gramas) < 0)
         return("Peso inválido")
-    else if(gramas >= 1000) {
+    else if(Number(gramas) >= 1000) {
         return((gramas * (3/100)).toFixed(2));
     }
     else

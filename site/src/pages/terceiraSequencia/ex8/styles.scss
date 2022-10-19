@@ -1,0 +1,73 @@
+.container-azul {
+    width: 50rem;
+    height: 30rem;
+    border: 3px solid #4d4dff ;
+    border-radius: .4rem;   
+}
+
+.container-verde {
+    width: 50rem;
+    height: 30rem;
+    border: 3px solid #74c365 ;
+    border-radius: .4rem;   
+}
+
+.container-vermelho {
+    width: 50rem;
+    height: 30rem;
+    border: 3px solid #d31949;
+    border-radius: .4rem;   
+}
+
+.borda {
+    display: flex;
+    justify-content: center;
+    padding: .8rem;
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+label {
+    margin-top: .8rem;
+}
+
+input {
+    font-family: sans-serif;
+    margin-top: .2rem;
+    padding: .3rem;
+    width: 40rem;
+    border-top: none;
+    border-right: none;
+    border: 1px solid #242424;
+}
+
+button {
+    color: #fff;
+    padding: .8rem 2rem;
+    border-radius: 1.1rem;
+    border: none;
+    margin: 2rem 0 1rem 0;
+    cursor: pointer;
+    bottom: 0;
+}
+
+img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.padding{
+    padding: 0 1rem;
+}
+
+::placeholder {
+    font-family: sans-serif;
+    color: #696969;
+}
+
+input[type=checkbox] {
+    margin: 0;
+    padding: 0;
+    height: 2rem;
+    width: 1.2rem;
+}

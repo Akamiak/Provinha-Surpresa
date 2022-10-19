@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import '../../../commom.scss'
 import '../../styles.scss';
 import verificarOrcamento from "../../../services/terceiraSequencia/ex7";
 
 export default function Orcamento() {
-    const [gastos, setGastos] = useState();
     const [ganhos, setGanhos] = useState();
+    const [gastos, setGastos] = useState();
     const [msg, setMsg] = useState('');
 
     function click() {
-        const resp = verificarOrcamento(gastos, ganhos);
+        const resp = verificarOrcamento(ganhos, gastos);
         setMsg(resp);
     }
 
