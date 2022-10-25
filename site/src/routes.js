@@ -13,6 +13,7 @@ import ContagemPage from './pages/quartaSequencia/ex9';
 import LinhaPage from './pages/quartaSequencia/ex10';
 import RetanguloPage from './pages/quartaSequencia/ex11';
 import CafePage from './pages/quintaSequencia/ex12';
+import AlunosPage from './pages/setimaSequencia/ex16';
 
 
 export default function Index() {
@@ -37,6 +38,8 @@ export default function Index() {
                 <Route path='/quarto/ex11' element={<RetanguloPage />} /> 
 
                 <Route path='/quinto/ex12' element={<CafePage />} /> 
+
+                <Route path='/setimo/ex16' element={<AlunosPage />} /> 
             </Routes>
         </BrowserRouter>
     )   

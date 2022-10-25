@@ -102,6 +102,17 @@ export default function Home() {
                     </div>
                 </div>
 
+                <div className="card">
+                    <h1 className="sequencia borda-laranja"> Sétima Sequência</h1>
+                    
+                    <div className="row jc-center titulo">
+                        <div className="column jc-center al-center">
+                            <h2> Alunos </h2>
+                            <Link to='/setimo/ex16'> <button className="text bF4A23E botão"> Exercício 16 </button> </Link>
+                        </div>
+                    </div>
+                </div>
+
             </nav>
         </section>
     )
