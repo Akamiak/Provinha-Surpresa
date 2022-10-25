@@ -18,27 +18,23 @@ export default function SalarioLiquido() {
         <section className="column wh100 jc-center al-center">
             <div>
                 <Link to='/'> <img src="/images/voltar.png" /> </Link>
-                <div className='container-verde al-center'>
+                <div className='container border-74c365 al-center'>
                     <div className="borda b74c365 jc-center al-center text">
                         CALCULAR SALÁRIO LÍQUIDO
                     </div>
 
-                    <div className="column padding text">
-                        <label className='c74c365'> Salário Base </label>
+                    <label className='c74c365 column padding text'> Salário Base 
                         <input type='text' placeholder='Informe o valor' value={salarioBase} onChange={e => Number(setSalarioBase(e.target.value))} />
-                    </div>
+                    </label>
                     
-                    <div className="column padding text">
-                        <label className='c74c365'> Bonus Percentual </label>
+                    <label className='c74c365 column padding text'> Bonus Percentual 
                         <input type='text' placeholder='Informe o valor' value={bonus} onChange={e => Number(setBonus(e.target.value))} />
-                    </div>
+                    </label>
                     
-                    <div className="column padding text">
-                        <label className='c74c365'> Desconto </label>
+                    <label className='c74c365 column padding text'> Desconto 
                         <input type='text' placeholder='Informe o valor' value={desconto} onChange={e => Number(setDesconto(e.target.value))} />
-                    </div>
+                    </label>
 
-                    
                     <div className="padding">
                         <button className="text b74c365" onClick={click}> Calcular </button>
                     </div>

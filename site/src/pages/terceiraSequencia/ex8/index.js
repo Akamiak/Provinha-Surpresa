@@ -19,30 +19,26 @@ export default function Cinema() {
         <section className="column wh100 jc-center al-center">
             <div>
                 <Link to='/'> <img src="/images/voltar.png" /> </Link>
-                <div className='container-vermelho al-center'>
+                <div className='container border-d31949 al-center'>
                     <div className="borda bd31949 jc-center al-center text">
                         Calcule seus ingressos
                     </div>
 
-                    <div className="column padding text">
-                        <label className='cd31949'> QTD. Inteiras: </label>
+                    <label className='cd31949 column padding text'> QTD. Inteiras:
                         <input type='text' placeholder='informe a quantidade' value={qtdInteiras} onChange={e => Number(setQtdInteiras(e.target.value))} /> 
-                    </div>
+                    </label>
 
-                    <div className="column padding text">
-                        <label className='cd31949'> QTD. Meias: </label>
+                    <label className='cd31949 column padding text'> QTD. Meias:
                         <input type='text' placeholder='informe a quantidade' value={qtdMeias} onChange={e => Number(setQtdMeias(e.target.value))} /> 
-                    </div>
-                    
-                    <div className="column padding text">
-                        <label className='cd31949'> Dia da Semana: </label>
+                    </label>
+                
+                    <label className='cd31949 column padding text'> Dia da Semana: 
                         <input type='text' placeholder='informe o dia da semana' value={diaSemana} onChange={e => setDiaSemana(e.target.value)} /> 
-                    </div>
+                    </label>
 
-                    <div className="column padding text jc-start">
-                        <label className='cd31949'> Brasileiro? </label>
+                    <label className='cd31949 column padding text'> Brasileiro?
                         <input type='checkbox' value={nacionalidade} onChange={e => setNacionalidade(e.target.checked)} /> 
-                    </div>
+                    </label>
 
                     <div className="padding">
                         <button className="text bd31949" onClick={click}> Calcular </button>

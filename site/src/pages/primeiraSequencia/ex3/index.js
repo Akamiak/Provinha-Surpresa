@@ -17,15 +17,14 @@ export default function SorveteriaPage() {
         <section className="column wh100 jc-center al-center">
             <div>
                 <Link to='/'> <img src="/images/voltar.png" /> </Link>
-                <div className="container-azul al-center">
+                <div className="container border-4d4dff al-center">
                     <div className="borda b4d4dff jc-center al-center text">
                         SORVETÃO DO BRUNÃO
                     </div>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> QTD. Gramas </label>
+                    <label className="c4d4dff column padding text"> QTD. Gramas 
                         <input type='text' placeholder="informe a quantidade de gramas" value={gramas} onChange={e => Number(setGramas(e.target.value))} />
-                    </div>
+                    </label>
 
                     <div className="padding">
                         <button className="text b4d4dff" onClick={click}> Calcular </button>

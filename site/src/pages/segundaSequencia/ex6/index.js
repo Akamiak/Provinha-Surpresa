@@ -16,15 +16,14 @@ export default function Temperatura() {
         <section className="column wh100 jc-center al-center">
             <div>
                 <Link to='/'> <img src="/images/voltar.png" /> </Link>
-                <div className='container-verde al-center'>
+                <div className='container border-74c365 al-center'>
                     <div className="borda b74c365 jc-center al-center text">
                         AVALIE A SUA TEMPERATURA
                     </div>
 
-                    <div className="column padding text     ">
-                        <label className='c74c365'> Temperatura: </label>
+                    <label className='c74c365 column padding text'> Temperatura:
                         <input type='text' placeholder='informe sua temperatura atual' value={temperatura} onChange={e => Number(setTemperatura(e.target.value))} /> 
-                    </div>
+                    </label>
 
                     <div className="padding">
                         <button className="text b74c365" onClick={click}> Checar </button>

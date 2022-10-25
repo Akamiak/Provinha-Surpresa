@@ -19,20 +19,18 @@ export default function Orcamento() {
         <section className="column wh100 jc-center al-center">
             <div>
                 <Link to='/'> <img src="/images/voltar.png" /> </Link>
-                <div className='container-vermelho al-center'>
+                <div className='container border-d31949 al-center'>
                     <div className="borda bd31949 jc-center al-center text">
                         Veja sua situação financeira
                     </div>
 
-                    <div className="column padding text">
-                        <label className='cd31949'> Ganhos: </label>
+                    <label className='cd31949 column padding text'> Ganhos:
                         <input type='text' placeholder='informe seus ganhos' value={ganhos} onChange={e => Number(setGanhos(e.target.value))} /> 
-                    </div>
+                    </label>
 
-                    <div className="column padding text">
-                        <label className='cd31949'> Gastos: </label>
+                    <label className='cd31949 column padding text'> Gastos:
                         <input type='text' placeholder='informe seus gastos' value={gastos} onChange={e => Number(setGastos(e.target.value))} /> 
-                    </div>
+                    </label>
 
                     <div className="padding">
                         <button className="text bd31949" onClick={click}> Checar </button>

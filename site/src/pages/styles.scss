@@ -1,23 +1,32 @@
-.container-azul {
+.container {
     width: 50rem;
     height: 30rem;
-    border: 3px solid #4d4dff ;
     border-radius: .4rem;   
 }
 
-.container-verde {
-    width: 50rem;
-    height: 30rem;
-    border: 3px solid #74c365 ;
-    border-radius: .4rem;   
+.border-4d4dff {
+    border: 3px solid #4d4dff;
 }
 
-.container-vermelho {
-    width: 50rem;
-    height: 30rem;
+.border-74c365 {
+    border: 3px solid #74c365;
+}
+
+.border-d31949 {
     border: 3px solid #d31949;
-    border-radius: .4rem;   
 }
+
+.border-857DB1 {
+    border: 3px solid #857DB1;
+}
+
+.border-F9E76D {
+    border: 3px solid #F9E76D;
+}
+
+// .border-4d4dff {
+//     border: 3px solid #4d4dff;
+// }
 
 .borda {
     display: flex;

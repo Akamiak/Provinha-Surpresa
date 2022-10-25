@@ -19,31 +19,28 @@ export default function Cafe() {
         <section className="column wh100 jc-center al-center">
             <div>
                 <Link to='/'> <img src="/images/voltar.png" /> </Link>
-                <div className="container-azul al-center">
-                    <div className="borda b4d4dff jc-center al-center text">
+                <div className="container border-F9E76D al-center">
+                    <div className="borda bF9E76D jc-center al-center text">
                         CAFÉ
                     </div>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> QTD. Alunos: </label>
+                    <label className="column padding text cF9E76D"> QTD. Alunos:
                         <input type='number' placeholder="informe a quantidade de alunos matriculados" value={estudantes} onChange={e => setEstudantes(e.target.value)} />
-                    </div>
+                    </label>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> Litros: </label>
+                    <label className="column padding text cF9E76D"> Litros:
                         <input type='number' placeholder="informe a quantidade de litros" value={litros} onChange={e => setLitros(e.target.value)} />
-                    </div>
+                    </label>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> ML. Alunos: </label>
+                    <label className="column padding text cF9E76D"> ML. Alunos:
                         <input type='number' placeholder="informe a quantidade de mililitros" value={mililitros} onChange={e => setMililitros(e.target.value)} />
-                    </div>
+                    </label>
 
                     <div className="padding">
-                        <button className="text b4d4dff" onClick={click}> Calcular </button>
+                        <button className="text bF9E76D" onClick={click}> Calcular </button>
                     </div>            
 
-                    <div className="padding"> Será necessário: <span className="c4d4dff text"> {result} litros </span> </div>
+                    <div className="padding"> Será necessário: <span className="cF9E76D text"> {result} litros </span> </div>
                 </div>
             </div>
         </section>

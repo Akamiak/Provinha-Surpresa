@@ -17,7 +17,7 @@ export default function Home() {
                 </Link>
             </div>
 
-            <div className="column jc-center al-center">
+            <nav className="column jc-center al-center">
                 <div className="card">
                     <h1 className="sequencia borda-azul"> Primeira Sequência</h1>
                     
@@ -71,7 +71,38 @@ export default function Home() {
                     </div>
                 </div>
 
-            </div>
+                <div className="card">
+                    <h1 className="sequencia borda-roxa"> Quarta Sequência</h1>
+                    
+                    <div className="row jc-between titulo">
+                        <div className="column jc-center al-center">
+                            <h2> Contar Até </h2>
+                            <Link to='/quarto/ex9'> <button className="text b857db1 botão"> Exercício 9 </button> </Link>
+                        </div>
+                        <div className="column jc-center al-center">
+                            <h2> Linha </h2>
+                            <Link to='/quarto/ex10'> <button className="text b857db1 botão"> Exercício 10 </button> </Link>
+                        </div>
+                        <div className="column jc-center al-center">
+                            <h2> Retângulo </h2>
+                            <Link to='/quarto/ex11'> <button className="text b857db1 botão"> Exercício 11 </button> </Link>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="card">
+                    <h1 className="sequencia borda-amarela"> Quinta Sequência</h1>
+                    
+                    <div className="row jc-center titulo">
+                        <div className="column jc-center al-center">
+                            <h2> Café </h2>
+                            <Link to='/quinto/ex12'> <button className="text bF9E76D botão"> Exercício 12 </button> </Link>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
         </section>
     )
 };

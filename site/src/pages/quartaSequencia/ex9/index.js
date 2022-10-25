@@ -18,26 +18,24 @@ export default function Contagem() {
         <section className="column wh100 jc-center al-center">
             <div>
                 <Link to='/'> <img src="/images/voltar.png" /> </Link>
-                <div className="container-azul al-center">
-                    <div className="borda b4d4dff jc-center al-center text">
+                <div className="container border-857DB1 al-center">
+                    <div className="borda b857db1 jc-center al-center text">
                         CONTAR ATÉ
                     </div>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> Início: </label>
+                    <label className="c857db1 column padding text"> Início:
                         <input type='number' placeholder="informe o início" value={inicio} onChange={e => setInicio(e.target.value)} />
-                    </div>
+                    </label>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> Fim: </label>
+                    <label className="c857db1 column padding text"> Fim:
                         <input type='number' placeholder="informe o fim" value={fim} onChange={e => setFim(e.target.value)} />
-                    </div>
+                    </label>
 
                     <div className="padding">
-                        <button className="text b4d4dff" onClick={click}> Contar </button>
+                        <button className="text b857db1" onClick={click}> Contar </button>
                     </div>            
 
-                    <div className="padding"> Contagem: <span className="c4d4dff text"> {result} </span> </div>
+                    <div className="padding"> Contagem: <span className="c857db1 text"> {result} </span> </div>
                 </div>
             </div>
         </section>

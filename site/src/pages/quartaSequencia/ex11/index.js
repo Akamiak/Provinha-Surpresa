@@ -48,24 +48,21 @@ export default function Retangulo() {
         <section className="column wh100 jc-center al-center">
             <div>
                 <Link to='/'> <img src="/images/voltar.png" alt="" /> </Link>
-                <div className="container-azul al-center">
-                    <div className="borda b4d4dff jc-center al-center text">
+                <div className="container border-857DB1 al-center">
+                    <div className="borda b857db1 jc-center al-center text">
                         RETÂNGULO
                     </div>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> Base: </label>
+                    <label className="c857db1 column padding text"> Base: 
                         <input type='number' placeholder="informe a largura" value={base} onChange={e => setBase(e.target.value)} />
-                    </div>
+                    </label>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> Altura: </label>
+                    <label className="c857db1 column padding text"> Altura: 
                         <input type='number' placeholder="informe a largura" value={altura} onChange={e => setAltura(e.target.value)} />
-                    </div>
+                    </label>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> Formato: </label>
-                        <div className="row text c242424">
+                    <label className="c857db1 column padding text"> Formato: 
+                        <div className="row text c857db1">
                             <div className="row al-center">
                                 <h4 className="padding"> Asterístico </h4>
                                 <input type='checkbox' value={asteristico}  name='check' onChange={e => setAsteristico(e.target.checked)} />
@@ -85,13 +82,13 @@ export default function Retangulo() {
                                 <input type='checkbox' value={foto}  name='check' onChange={e => setFoto(e.target.checked)} />
                             </div> */}
                         </div>
-                    </div>
+                    </label>
 
                     <div className="padding">
-                        <button className="text b4d4dff" onClick={click}> Contar </button>
+                        <button className="text b857db1" onClick={click}> Contar </button>
                     </div>            
 
-                    <div className="padding"> Visualizar: <span className="c4d4dff text"> {result} </span> </div>
+                    <div className="padding"> Visualizar: <span className="c857db1 text"> {result} </span> </div>
                 </div>
             </div>
         </section>

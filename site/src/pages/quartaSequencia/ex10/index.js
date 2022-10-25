@@ -17,21 +17,20 @@ export default function Linha() {
         <section className="column wh100 jc-center al-center">
             <div>
                 <Link to='/'> <img src="/images/voltar.png" /> </Link>
-                <div className="container-azul al-center">
-                    <div className="borda b4d4dff jc-center al-center text">
+                <div className="container border-857DB1 al-center">
+                    <div className="borda b857db1 jc-center al-center text">
                         LINHA
                     </div>
 
-                    <div className="column padding text">
-                        <label className="c4d4dff"> QTD. Caracteres: </label>
+                    <label className="c857db1 column padding text"> QTD. Caracteres:
                         <input type='number' placeholder="informe a quantidade desejada" value={quantidade} onChange={e => setQuantidade(e.target.value)} />
-                    </div>
+                    </label>
 
                     <div className="padding">
-                        <button className="text b4d4dff" onClick={click}> Contar </button>
+                        <button className="text b857db1" onClick={click}> Contar </button>
                     </div>            
 
-                    <div className="padding"> Visualizar: <span className="c4d4dff text"> {result} </span> </div>
+                    <div className="padding"> Visualizar: <span className="c857db1 text"> {result} </span> </div>
                 </div>
             </div>
         </section>
